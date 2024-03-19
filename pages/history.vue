@@ -57,7 +57,7 @@ export default {
     async listhis() {
       this.data = this.GET_REFID
       const querySnapshot2 = query(
-        collection(db, 'historyGG'),
+        collection(db, 'history'),
         where('refId', '==', this.data.refId)
       )
       const dataUser = await getDocs(querySnapshot2)
