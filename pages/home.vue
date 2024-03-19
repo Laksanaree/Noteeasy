@@ -6,16 +6,23 @@
         <v-divider class="mx-4" inset vertical></v-divider>
         <v-spacer></v-spacer>
 
-        <v-autocomplete
-          v-model="search"
-          label="หมวดหมู่"
-          single-line
-          hide-details
-          :items="categoryListSearch"
-        ></v-autocomplete>
-        <v-btn color="green" dark class="mb-2" @click="openDialog">
-          + เพิ่มรายการ
-        </v-btn>
+        <v-row>
+          <v-col cols="6"></v-col>
+          <v-col cols="3">
+            <v-autocomplete
+              v-model="search"
+              label="หมวดหมู่"
+              single-line
+              hide-details
+              :items="categoryListSearch"
+            ></v-autocomplete>
+          </v-col>
+          <v-col cols="3">
+            <v-btn color="green" dark class="mb-2" @click="openDialog">
+              + เพิ่มรายการ
+            </v-btn></v-col
+          >
+        </v-row>
 
         <v-dialog v-model="dialog" max-width="500px">
           <v-form ref="from">
@@ -117,7 +124,7 @@
     </template>
     <template #[`item.actions`]="{ item }">
       <v-icon small class="mr-2" @click="editItem(item)" color="blue">
-        mdi-pencil 
+        mdi-pencil
       </v-icon>
       <v-icon small @click="deleteData(item)" color="red"> mdi-delete </v-icon>
     </template>
