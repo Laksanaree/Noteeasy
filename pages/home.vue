@@ -5,7 +5,7 @@
         <v-toolbar-title>รายการ</v-toolbar-title>
         <v-divider class="mx-4" inset vertical></v-divider>
         <v-spacer></v-spacer>
-
+git push -u origin main
         <v-row>
           <v-col cols="6"></v-col>
           <v-col cols="3">
